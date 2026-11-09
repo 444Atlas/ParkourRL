@@ -1,10 +1,14 @@
 # ParkourRL 🐕⚡
 
+<p align="center">
+  <img src="assets/simulation.gif" alt="ParkourRL Quadruped Simulation" width="850">
+</p>
+
 ParkourRL is a 2D physics-based simulation and Reinforcement Learning (PPO) platform for quadruped robots (modeled after Boston Dynamics Spot and Unitree Go1). It trains and evaluates autonomous locomotion policies—from steady posture and walking on flat or rough terrain, to perception-driven parkour jumping over high obstacles.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Realistic 2D Quadruped Dynamics**:
   - Accurate physical modeling built on **PyMunk** and **Pygame**.
@@ -22,10 +26,14 @@ ParkourRL is a 2D physics-based simulation and Reinforcement Learning (PPO) plat
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ParkourRL/
+├── assets/                     # Visual illustrations & simulation recordings
+│   ├── simulation.gif          # Real-time animated simulation recording
+│   ├── simulation_jump.png     # High-power jump overflight capture
+│   └── simulation_detection.png# 3-ray LiDAR vision detection capture
 ├── V4/                         # Latest state-of-the-art implementation
 │   ├── Env.py                  # PyMunk 2D simulation environment, robot anatomy & rewards
 │   ├── Evaluate.py             # Interactive visualization and multi-policy runner
@@ -82,7 +90,7 @@ When the simulation window is open, use the following keybindings:
 
 ---
 
-## 🧠 Training Custom Policies
+## Training Custom Policies
 
 To train a policy from scratch or fine-tune an existing model:
 
@@ -100,9 +108,15 @@ python Train.py --mode jumping --steps 50000
 
 ---
 
-## 📊 Technical Overview
+## Technical Overview
 
 ### Vision & Autonomous Obstacle Clearance
+
+<p align="center">
+  <img src="assets/simulation_detection.png" alt="3-Ray Vision Obstacle Detection" width="49%">
+  <img src="assets/simulation_jump.png" alt="High-Power Obstacle Jump" width="49%">
+</p>
+
 ```
   [ Head ]
      \  +20°  -------->  (Range: 150 px)
@@ -118,7 +132,8 @@ python Train.py --mode jumping --steps 50000
 
 ---
 
-## 📜 License & Acknowledgments
+## License & Acknowledgments
 
 Developed by **Paul Laurent-Verleye** as part of advanced reinforcement learning and robotics research.
 Built with Python, PyMunk, Pygame, and PyTorch.
+
