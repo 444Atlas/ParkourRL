@@ -1,0 +1,10 @@
+{
+    "task": "standing",
+    "robot_type": "3_membres",
+    "model_name": "standing_3_membres",
+    "action_dim": 2,
+    "state_dim": 9,
+    "total_timesteps": 500000,
+    "warmstart": "models/ppo_standing_3_membres.pth",
+    "training_time_seconds": 159.0
+}
