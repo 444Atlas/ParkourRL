@@ -1,7 +1,7 @@
 # ParkourRL
 
 <p align="center">
-  <img src="assets/simulation.png" alt="ParkourRL Quadruped Simulation" width="850">
+  <img src="assets/robot_standing.png" alt="Robot Quadrupède en posture debout (Standing)" width="850">
 </p>
 
 ParkourRL is a 2D physics-based simulation and Reinforcement Learning (PPO) platform for quadruped robots (modeled after Boston Dynamics Spot and Unitree Go1). It trains and evaluates autonomous locomotion policies—from steady posture and walking on flat or rough terrain, to perception-driven parkour jumping over high obstacles.
@@ -30,10 +30,8 @@ ParkourRL is a 2D physics-based simulation and Reinforcement Learning (PPO) plat
 
 ```text
 ParkourRL/
-├── assets/                     # Visual illustrations & simulation captures
-│   ├── simulation.png          # Real-time simulation capture
-│   ├── simulation_jump.png     # High-power jump overflight capture
-│   └── simulation_detection.png# 3-ray LiDAR vision detection capture
+├── assets/                     # Visual illustrations
+│   └── robot_standing.png      # Standing quadruped posture capture
 ├── V4/                         # Latest state-of-the-art implementation
 │   ├── Env.py                  # PyMunk 2D simulation environment, robot anatomy & rewards
 │   ├── Evaluate.py             # Interactive visualization and multi-policy runner
@@ -111,11 +109,6 @@ python Train.py --mode jumping --steps 50000
 ## Technical Overview
 
 ### Vision & Autonomous Obstacle Clearance
-
-<p align="center">
-  <img src="assets/simulation_detection.png" alt="3-Ray Vision Obstacle Detection" width="49%">
-  <img src="assets/simulation_jump.png" alt="High-Power Obstacle Jump" width="49%">
-</p>
 
 ```
   [ Head ]
